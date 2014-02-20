@@ -28,17 +28,12 @@
       </ul>
 
 </nav>
-
-<div id="info">
-	<label>Name:</label>{{userProfile.name}}<br/>
-	<label>Gender:</label>{{userProfile.gender}}<br/>
-	<label>Employee Id:</label>{{userProfile.employeeId}}<br/>
-	<label>Contact Number:</label>{{userProfile.contactNo}}<br/>
-	<label>Team:</label>{{userProfile.team}}<br/>
+<div id="inputArea">
+<div class="input-group" >
+  <span class="input-group-addon btn btn-primary">+63</span>
+  <input type="text" class="form-control" placeholder="9061002894" data-ng-model="messenger.number">
+ 
 </div>
-<div id="info"> 
-	<label>User name:</label>{{userProfile.username}}<br/>
-	<label>Password:</label>{{userProfile.password && 'yes' || 'no'}}<br/>
-
-
-</div>
+ <textarea class="form-control" data-ng-model="messenger.message" rows="5" placeholder="Type your message here"></textarea>
+ <button class="btn btn-primary form-control">Send</button>
+ </div>

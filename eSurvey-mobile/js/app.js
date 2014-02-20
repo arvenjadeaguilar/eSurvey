@@ -19,6 +19,10 @@ eSurveyApp.config(['$routeProvider',
   templateUrl: 'templates/home.html',
   controller: 'homeController'
       }).
+      when('/message', {
+  templateUrl: 'templates/message.html',
+  controller: 'messageController'
+      }).
       otherwise({
 	redirectTo: '/login'
       });
