@@ -1,0 +1,27 @@
+#login{
+
+	margin-top:20%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#server{
+
+	margin-top:20%;
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+#info{
+				margin-left: 1%;
+				margin-right: 1%;
+				border: .2em solid #C0C0C0;
+				-moz-border-radius: 0.6em;
+				-webkit-border-radius: 0.6em;
+				border-radius: 0.6em;
+				margin-bottom: 0.5em;
+}
+#inputArea{
+	margin-left: 10%;
+	margin-right: 10%;
+}
