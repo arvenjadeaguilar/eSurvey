@@ -1,5 +1,0 @@
-INDEX VERSION 1.126+D:\androidApp\eSurvey\.metadata\.plugins\org.eclipse.jdt.core
-513785031.index
-1796727095.index
-113112033.index
-1439081702.index
