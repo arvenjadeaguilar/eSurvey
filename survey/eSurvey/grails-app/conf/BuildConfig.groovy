@@ -4,7 +4,7 @@ grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
-grails.plugin.location.'ocom-angularjs-plugin' = '../angularjs-plugin'
+grails.plugin.location.'ocom-angularjs-plugin' = '../ocom-angularjs-plugin'
 
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 

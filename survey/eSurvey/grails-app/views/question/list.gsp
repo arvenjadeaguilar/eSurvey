@@ -9,9 +9,6 @@
 		<input class="form-control" type="search" ng-model="listOptions.q" placeholder="Search"/>
 	</div>
 	<div class="form-group">
-		<select class="form-control" ng-model="listOptions.searchField" ng-options="field.value as field.name for field in fields" ></select>
-	</div>
-	<div class="form-group">
 		<a href="" ng-click="refreshList()" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></a>
 	
 		<a href="#create" class="btn btn-primary">New</a>
@@ -21,17 +18,17 @@
 <table class="table table-bordered table-striped list">
     <thead>
         <tr>
+		
+			<th>
+				<a href="" ng-click="sortBy('name')">Name</a>
+				<i ng-show="listOptions.sort=='name' && listOptions.order=='asc'" class="glyphicon glyphicon-chevron-up pull-right"></i>
+				<i ng-show="listOptions.sort=='name' && listOptions.order=='desc'" class="glyphicon glyphicon-chevron-down pull-right"></i>
+			</th>
+		
 			<th>
 				<a href="" ng-click="sortBy('survey')">Survey</a>
 				<i ng-show="listOptions.sort=='survey' && listOptions.order=='asc'" class="glyphicon glyphicon-chevron-up pull-right"></i>
 				<i ng-show="listOptions.sort=='survey' && listOptions.order=='desc'" class="glyphicon glyphicon-chevron-down pull-right"></i>
-			</th>
-		
-
-			<th>
-				<a href="" ng-click="sortBy('name')">Question</a>
-				<i ng-show="listOptions.sort=='name' && listOptions.order=='asc'" class="glyphicon glyphicon-chevron-up pull-right"></i>
-				<i ng-show="listOptions.sort=='name' && listOptions.order=='desc'" class="glyphicon glyphicon-chevron-down pull-right"></i>
 			</th>
 		
 			
@@ -42,17 +39,17 @@
 		
 			<td>
 			<a data-ng-click="show(item)">
-					
-			{{ item.survey.name }}
-			</a>	
-			</td>
-		
-
-			<td>
 			{{ item.name }}
+			</a>
 			</td>
 		
+			<td>
+			
+			{{ item.survey.name }}
+			
+			</td>
 		
+			
         </tr>
     </tbody>
 </table>

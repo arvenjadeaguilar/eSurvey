@@ -1,0 +1,81 @@
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span style="color:blue;font-size:2em;">e</span><span>Survey</span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#survey/{{username}}/{{uid}}"><i class="glyphicon glyphicon-share-alt"></i>Back</a></li>
+        
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li >
+          <a href="#"><i class="glyphicon glyphicon-log-out"></i>Logout</a>
+         
+        </li>
+      </ul>
+	</div>
+	</div>
+
+</nav>
+<div>
+	<div data-ng-repeat="question in questionList">
+		<span>{{$index+1}}.) {{question.name}}</span>
+		<span data-ng-show="question.type==1">
+			<input type="text" class="form-control" ng-model="answer[$index]">
+		</span>
+		<span data-ng-show="question.type==2"><br/>
+			<span>
+				<input type="radio"  ng-model="answer[$index]" name="answer" value="true"> True 
+				<input type="radio"  ng-model="answer[$index]" name="answer" value="false"> False
+			</span>
+		</span>
+		<span data-ng-show="question.type==3"><br/>
+			<span data-ng-show="question.option1!=null && question.option1!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option1}}" >{{question.option1}}
+			</span>
+			<span data-ng-show="question.option2!=null && question.option2!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option2}}" >{{question.option2}}
+			</span>
+			<span data-ng-show="question.option3!=null && question.option3!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option3}}" >{{question.option3}}
+			</span>
+			<span data-ng-show="question.option4!=null && question.option4!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option4}}" >{{question.option4}}
+			</span>
+			<span data-ng-show="question.option5!=null && question.option5!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option5}}" >{{question.option5}}
+			</span>
+			<span data-ng-show="question.option6!=null && question.option6!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option6}}" >{{question.option6}}
+			</span>
+			<span data-ng-show="question.option7!=null && question.option7!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option7}}" >{{question.option7}}
+			</span>
+			<span data-ng-show="question.option8!=null && question.option8!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option8}}" >{{question.option8}}
+			</span>
+			<span data-ng-show="question.option9!=null && question.option9!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option9}}" >{{question.option9}}
+			</span>
+			<span data-ng-show="question.option10!=null && question.option10!=''"><br/>
+				<input type="radio" ng-model="answer[$index]" name="answer[$index]" value="{{question.option10}}" >{{question.option10}}
+			</span>
+		</span>
+		
+		
+	</div>
+	{{answer}}
+	<button data-ng-click="submit(answer)" class="btn btn-info form-control">Submit</button>
+</div>

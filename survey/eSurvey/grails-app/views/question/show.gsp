@@ -15,6 +15,9 @@
 	<dt>Survey</dt>
 	<dd data-ng-bind="item.survey"></dd>
 	
+	<dt>Type</dt>
+	<dd data-ng-bind="item.type"></dd>
+	
 </dl>
 <div class="form-actions">
 	<a class="btn" data-ng-href="#/edit/{{item.id}}"><i class="glyphicon glyphicon-edit"></i> Edit</a>

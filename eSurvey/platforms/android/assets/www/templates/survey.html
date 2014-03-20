@@ -14,7 +14,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li> <a href="#home">Home</a></li>
+        <li> <a href="#home/{{username}}"><i class="glyphicon glyphicon-home"></i>Home</a></li>
         <li class="active"><a>Start Survey</a></li>
         <li><a href="#message">Send Message</a></li>
       </ul>
@@ -22,16 +22,22 @@
       <ul class="nav navbar-nav navbar-right">
         
         <li >
-          <a href="#">Logout</a>
+          <a href="#"><i class="glyphicon glyphicon-log-out"></i>Logout</a>
          
         </li>
       </ul>
-
+<div>
 </nav>
 
 
-<div>
-  
 
-
+	<h4>On Going Survey's</h4>
+	<hr/>
+			<span  data-ng-repeat="survey in surveyList">
+			<a href="#question/{{username}}/{{id}}/{{survey.id}}">
+	 		<button class="form-control btn btn-danger">		  		
+		  		{{survey.name}} <i style="float:right;" class="glyphicon glyphicon-chevron-right"></i>
+		  	</button>
+		  	</a>
+		 	</span>
 </div>

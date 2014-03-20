@@ -15,7 +15,7 @@ eSurveyApp.config(['$routeProvider',
 	templateUrl: 'templates/server.html',
 	controller: 'serverController'
       }).
-      when('/home', {
+      when('/home/:username', {
   templateUrl: 'templates/home.html',
   controller: 'homeController'
       }).
@@ -23,13 +23,17 @@ eSurveyApp.config(['$routeProvider',
   templateUrl: 'templates/message.html',
   controller: 'messageController'
       }).
-       when('/survey', {
+       when('/survey/:username/:id', {
   templateUrl: 'templates/survey.html',
   controller: 'surveyController'
       }).
-       when('/survey1', {
+       when('/survey1/:id', {
   templateUrl: 'survey.html',
   controller: 'surveyController'
+      }).
+       when('/question/:username/:uid/:id', {
+  templateUrl: 'templates/question.html',
+  controller: 'questionController'
       }).
       otherwise({
 	redirectTo: '/login'

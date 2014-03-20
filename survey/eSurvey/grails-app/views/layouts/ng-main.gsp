@@ -67,7 +67,12 @@
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown">Menu<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><g:link action="index" controller="option1">Option1</g:link></li>
+							<li><g:link action="index" controller="team">Teams</g:link></li>
+							<li><g:link action="index" controller="user">Users</g:link></li>
+							<li><g:link action="index" controller="survey">Surveys</g:link></li>
+							<li><g:link action="index" controller="question">Question</g:link></li>
+
+
 						</ul></li>
 				</ul>
 			</div><!--/.nav-collapse -->

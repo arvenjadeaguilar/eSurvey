@@ -1,6 +1,11 @@
+.image{
+	margin-top: 20%; 
+
+}
+
 #login{
 
-	margin-top:20%;
+	margin-top:0%;
 	margin-left: 10%;
 	margin-right: 10%;
 }
@@ -29,4 +34,10 @@
 #inputArea{
 	margin-left: 10%;
 	margin-right: 10%;
+}
+
+body{
+
+	background-image: url('../img/statistic.jpg');
+	background-size: 100%;
 }

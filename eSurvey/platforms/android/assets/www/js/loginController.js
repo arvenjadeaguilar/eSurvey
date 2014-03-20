@@ -11,14 +11,16 @@ eSurveyApp.controller('loginController',function($scope,$routeParams,$rootScope,
 				username:$scope.username,
 				password:$scope.password
 
-			}).success(function(data){
+			}).success(function(data,status){
 				if(data!=0){
-				$location.path('/home');
+				$location.path('/home/'+$scope.username);
 				}
 				else{
 				$location.path('/login');
-				$scope.message = "fuck you";
+				$scope.message = "Incorrect Username or Password";
 				}
+
+
 		});
 	}
 

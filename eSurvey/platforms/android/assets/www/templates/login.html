@@ -1,5 +1,22 @@
 
-<div class="alert alert-danger">{{message}}</div>
+
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      
+      <a class="navbar-brand" href="#"><span style="color:blue;font-size:2em;">e</span><span>Survey</span></a>
+    </div>
+
+  
+<div>
+</nav>
+
+<div class="image" align="center">
+	<img src="img/stat.png">
+</div>
+
+<div data-ng-show="message" class="alert alert-danger">{{message}}</div>
 <div id="login" class="form-group">
 	<form ng-submit="login()">
 		<input type="text" name="username" class="form-control" ng-model="username" placeholder="username"/>		
@@ -7,6 +24,6 @@
 		<button type="submit" class="btn btn-primary form-control">Login</button>
 	</form>
 
-	<div style="margin-top:0.5em;"><a href="#server" >Set Server Address?</a></div>
+	<div style="margin-top:0.5em; color:white;"><a href="#server" style="color:white" >Set Server Address?</a></div>
 	
 </div>

@@ -1,10 +1,13 @@
 
 eSurveyApp.controller('homeController',function($scope,$routeParams,$rootScope,$http,$location){
 	
+	$scope.address = "http://" + $rootScope.serverAddress+'/eSurvey/mobile/'; 
 	
-	$scope.userProfile = {
-		name:"arven jade aguilar", username:"arvenjadeaguilar", password:"yes",gender:"male", employeeId:"x444", contactNo:"09091234567",team:"team gwapo" }
-
+	$scope.username = $routeParams.username
+	console.log($scope.username);
+	$http.get($scope.address+'getUser',{params:{username:$scope.username}}).success(function(data){
+		$scope.userProfile = data;
+	});
 
 });
 

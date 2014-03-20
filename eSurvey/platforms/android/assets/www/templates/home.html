@@ -14,15 +14,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#home">Home</a></li>
-        <li><a href="#survey">Start Survey</a></li>
+        <li class="active"><i class="glyphicon glyphicon-home"></i> Home</li>
+        <li><a href="#survey/{{userProfile.username}}/{{userProfile.id}}">Start Survey</a></li>
         <li><a href="#message">Send Message</a></li>
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
         
         <li >
-          <a href="#">Logout</a>
+          <a href="#"><i class="glyphicon glyphicon-log-out"></i>Logout</a>
          
         </li>
       </ul>
@@ -34,7 +34,7 @@
 	<label>Gender:</label>{{userProfile.gender}}<br/>
 	<label>Employee Id:</label>{{userProfile.employeeId}}<br/>
 	<label>Contact Number:</label>{{userProfile.contactNo}}<br/>
-	<label>Team:</label>{{userProfile.team}}<br/>
+	
 </div>
 <div id="info"> 
 	<label>User name:</label>{{userProfile.username}}<br/>
